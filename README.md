@@ -96,6 +96,7 @@ var enjoyhint_script_steps = [
 * `bottom` - bottom margin for the shape of "rect" type  
 * `left` - left margin for the shape of "rect" type
 * `scrollAnimationSpeed` - sets the auto scroll speed (ms).
+* `skipStepsOnNext` - sets how many steps should be skipped on next button pressed. (for Ex.:2)  
 * `nextButton` - allows applying its classes and names for the button Nеxt.
 * `skipButton` - allows applying its classes and names for the button Skip. For the example :
 ```javascript

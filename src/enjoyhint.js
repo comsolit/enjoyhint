@@ -53,7 +53,14 @@
 
       $body.enjoyhint({
         onNextClick: function() {
-          nextStep();
+          let skipToStep = null
+          const skipStepsOnNext = data[current_step].skipStepsOnNext
+          if (skipStepsOnNext) {
+            // Calculate from next step because of next clicked
+            const nextStep = current_step + 1
+            skipToStep = nextStep + data[current_step].skipStepsOnNext
+          }
+          nextStep(skipToStep);
         },
         onPrevClick: function(){
           prevStep();
@@ -318,8 +325,8 @@
       }, timeout);
     };
 
-    var nextStep = function() {
-      current_step++;
+    var nextStep = function(cs) {
+      current_step = cs || current_step + 1
       stepAction();
     };
 
