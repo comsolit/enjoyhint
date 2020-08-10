@@ -991,8 +991,8 @@ CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
             else {
               distance = initial_distance;
               ver_button_position = initial_ver_position;
-              that.$next_btn.html('Next');
-              that.$prev_btn.html('Previous');
+              that.$next_btn.html(data.nextButtonText || 'Next');
+              that.$prev_btn.html(data.prevButtonText || 'Previous');
             }
 
             that.$prev_btn.css({

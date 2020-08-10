@@ -183,6 +183,8 @@
 
           if (step_data.showNext !== true) {
             $body.enjoyhint("hide_next");
+          } else {
+            $body.enjoyhint("show_next");
           }
 
           $body.enjoyhint("hide_prev");
@@ -282,8 +284,18 @@
             left: step_data.left,
             right: step_data.right,
             margin: step_data.margin,
-            scroll: step_data.scroll
+            scroll: step_data.scroll,
+            nextButtonText: null,
+            prevButtonText: null
           };
+
+          if (step_data.nextButton && step_data.nextButton.text) {
+            shape_data.nextButtonText = step_data.nextButton.text
+          }
+
+          if (step_data.prevButton && step_data.prevButton.text) {
+            shape_data.prevButtonText = step_data.prevButton.text
+          }
 
           if (shape_data.center_x === 0 && shape_data.center_y === 0) {
             $body.enjoyhint("hide");
