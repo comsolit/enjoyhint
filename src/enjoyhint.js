@@ -156,10 +156,24 @@
           that.clear();
         }, 250);
 
+        const getScrollParent = function (element) {
+          const regex = /(auto|scroll)/;
+          const parents = $(element).parents()
+
+          for (const parent of parents) {
+            if (regex.test($(parent).css('overflow') + $(parent).css('overflowY') + $(parent).css('overflowX'))) {
+              return $(parent)
+            }
+          }
+
+          return document.body
+        }
+
         var isHintInViewport = $(step_data.selector).get(0).getBoundingClientRect();
         if(isHintInViewport.top < 0 || isHintInViewport.bottom > (window.innerHeight || document.documentElement.clientHeight)){
           hideCurrentHint();
-          $(document.body).scrollTo(step_data.selector, step_data.scrollAnimationSpeed || 250, {offset: -200});
+          getScrollParent($(step_data.selector)).scrollTo(step_data.selector, step_data.scrollAnimationSpeed || 250, {offset: -200});
+          // $(document.body).scrollTo(step_data.selector, step_data.scrollAnimationSpeed || 250, {offset: -200});
         }
         else {
           // if previous button has been clicked and element are in viewport to prevent custom step scrollAnimationSpeed set scrollSpeed to default
