@@ -200,7 +200,6 @@ CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
         $right_dis_events.click(stopPropagation);
 
         that.$skip_btn = $("<div>", { class: that.cl.skip_btn })
-          .appendTo(that.enjoyhint)
           .html("Skip")
           .click(function(e) {
             that.hide();
@@ -208,7 +207,6 @@ CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
           });
 
         that.$next_btn = $("<div>", { class: that.cl.next_btn })
-          .appendTo(that.enjoyhint)
           .html("Next")
           .click(function(e) {
             that.options.onNextClick();
@@ -223,7 +221,6 @@ CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
           });
 
         that.$prev_btn = $("<div>", { class: that.cl.previous_btn })
-          .appendTo(that.enjoyhint)
           .html("Previous")
           .click(function(e) {
             that.options.onPrevClick();
@@ -315,9 +312,9 @@ CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
             that.stepData.height = newDataCoords.height + 11;
 
             that.renderLabelWithShape(that.stepData);
-            $('.enjoyhint_next_btn').css('visibility', 'visible');
-            $('.enjoyhint_prev_btn').css('visibility', 'visible');
-            $('.enjoyhint_skip_btn').css('visibility', 'visible');
+            that.$next_btn.css('visibility', 'visible')
+            that.$prev_btn.css('visibility', 'visible')
+            that.$skip_btn.css('visibility', 'visible')
           }
 
           doit = setTimeout(function() {
@@ -521,6 +518,10 @@ CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
             text: data.text
           });
 
+          // Attach label actions
+          const labelActions = that.getLabelActions()
+          $(labelActions).appendTo(label)
+
           var label_w = label.width();
           var label_h = label.height();
           var label_left = label.offset().left;
@@ -657,6 +658,37 @@ CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
             .html(data.text)
             .appendTo(that.enjoyhint);
         };
+
+        that.getLabelActions = function () {
+          const labelActionsElement = $("<div></div>", {
+            class: 'enjoy_hint_label_actions',
+            id: 'enjoyhint_label_actions'
+          })
+
+          that.$prev_btn
+            .appendTo(labelActionsElement)
+            .off()
+            .click(function(e) {
+              that.options.onPrevClick();
+            });
+
+          that.$next_btn
+            .appendTo(labelActionsElement)
+            .off()
+            .click(function(e) {
+              that.options.onNextClick();
+            });
+
+          that.$skip_btn
+            .appendTo(labelActionsElement)
+            .off()
+            .click(function(e) {
+              that.hide();
+              that.options.onSkipClick();
+            });
+
+          return labelActionsElement
+        }
 
         that.disableEventsNearRect = function(rect) {
           $top_dis_events
@@ -966,61 +998,14 @@ CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
           });
 
           setTimeout(function(){
-            var summoryButtonWidth = that.$next_btn.width() + that.$skip_btn.width() + that.$prev_btn.width() + 30;
-            var distance = label_x - 100;
-            var ver_button_position = label_y + label_height + 40
-
-            if (summoryButtonWidth + label_x > x_to) {
-              distance = x_to >= x_from ? x_to + 20 : label_x + label_width/2
-            }
-
-            if (summoryButtonWidth + distance > window.innerWidth || distance < 0) {
-              distance = 10;
-              ver_button_position = y_from < y_to ? label_y - 80 : label_y + label_height + 40
-            }
-
-            var initial_distance = distance;
-            var initial_ver_position = ver_button_position;
-
             if (window.innerWidth <= 640) {
-              distance = 10;
-              ver_button_position = 10;
               that.$next_btn.html('&#8250;');
               that.$prev_btn.html('&#8249;');
-            }
-            else {
-              distance = initial_distance;
-              ver_button_position = initial_ver_position;
+            } else {
               that.$next_btn.html(data.nextButtonText || 'Next');
               that.$prev_btn.html(data.prevButtonText || 'Previous');
+              that.$skip_btn.html(data.skipButtonText || 'Skip');
             }
-
-            that.$prev_btn.css({
-              left: distance,
-              top: ver_button_position
-            });
-
-            var left_next = distance + that.$prev_btn.width() + 10;
-            var left_skip = distance + that.$prev_btn.width() + that.$next_btn.width() + 20;
-
-            if (that.nextBtn === "hide") {
-              left_skip = distance + that.$prev_btn.width() + 10;
-            }
-
-            if(that.prevBtn === "hide") {
-              left_next = distance;
-              left_skip = distance + that.$next_btn.width() + 10;
-            }
-
-            that.$next_btn.css({
-              left: left_next,
-              top: ver_button_position
-            })
-
-            that.$skip_btn.css({
-              left: left_skip,
-              top: ver_button_position
-            });
           }, 0)
 
           that.$close_btn.css({

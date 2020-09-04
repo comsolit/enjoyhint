@@ -218,10 +218,10 @@
             $body.enjoyhint("hide_prev");
           }
 
-          if (step_data.showSkip == false) {
-            $body.enjoyhint("hide_skip");
-          } else {
+          if (step_data.showSkip) {
             $body.enjoyhint("show_skip");
+          } else {
+            $body.enjoyhint("hide_skip");
           }
 
 
@@ -307,7 +307,8 @@
             margin: step_data.margin,
             scroll: step_data.scroll,
             nextButtonText: null,
-            prevButtonText: null
+            prevButtonText: null,
+            skipButtonText: null
           };
 
           if (step_data.nextButton && step_data.nextButton.text) {
@@ -316,6 +317,10 @@
 
           if (step_data.prevButton && step_data.prevButton.text) {
             shape_data.prevButtonText = step_data.prevButton.text
+          }
+
+          if (step_data.skipButton && step_data.skipButton.text) {
+            shape_data.skipButtonText = step_data.skipButton.text
           }
 
           if (shape_data.center_x === 0 && shape_data.center_y === 0) {
