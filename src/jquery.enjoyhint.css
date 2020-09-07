@@ -2,10 +2,10 @@
   font-family: "casino_handregular";
   src: url("src/Casino_Hand/casino_hand-webfont.eot");
   src: url("src/Casino_Hand/casino_hand-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("src/Casino_Hand/casino_hand-webfont.woff") format("woff"),
-    url("src/Casino_Hand/casino_hand-webfont.ttf") format("truetype"),
-    url("src/Casino_Hand/casino_hand-webfont.svg#casino_handregular") format("svg");
+  format("embedded-opentype"),
+  url("src/Casino_Hand/casino_hand-webfont.woff") format("woff"),
+  url("src/Casino_Hand/casino_hand-webfont.ttf") format("truetype"),
+  url("src/Casino_Hand/casino_hand-webfont.svg#casino_handregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -36,7 +36,6 @@
 
 .enjoyhint_next_btn {
   min-width: 100px;
-  position: absolute;
   z-index: 1012;
   /*display: none;*/
   pointer-events: all;
@@ -45,7 +44,6 @@
   box-sizing: content-box;
   height: 40px;
   cursor: pointer;
-  margin: 0 auto;
   border: 2px solid rgb(30, 205, 151);
   -webkit-border-radius: 40px;
   border-radius: 40px;
@@ -57,26 +55,25 @@
   letter-spacing: 1px;
   background: rgba(0, 0, 0, 0);
   -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
 .enjoyhint_prev_btn {
   min-width: 100px;
-  position: absolute;
   z-index: 1012;
   /*display: none;*/
   pointer-events: all;
@@ -85,7 +82,6 @@
   box-sizing: content-box;
   height: 40px;
   cursor: pointer;
-  margin: 0 auto;
   border: 2px solid rgb(30, 205, 151);
   -webkit-border-radius: 40px;
   border-radius: 40px;
@@ -97,21 +93,21 @@
   letter-spacing: 1px;
   background: rgba(0, 0, 0, 0);
   -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
 .enjoyhint_prev_btn:hover {
@@ -143,8 +139,6 @@
 }
 
 .enjoyhint_skip_btn {
-  position: absolute;
-  position: absolute;
   z-index: 1012;
   /*display: none;*/
   pointer-events: all;
@@ -154,7 +148,6 @@
   box-sizing: content-box;
   height: 40px;
   cursor: pointer;
-  margin: 0 auto;
   border: 2px solid rgb(30, 205, 151);
   -webkit-border-radius: 40px;
   border-radius: 40px;
@@ -166,21 +159,21 @@
   letter-spacing: 1px;
   background: rgba(0, 0, 0, 0);
   -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
 .enjoyhint_skip_btn:hover {
@@ -296,21 +289,21 @@
   letter-spacing: 1px;
   background: rgba(0, 0, 0, 0);
   -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0),
-    color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-width 0.3s cubic-bezier(0, 0, 0, 0),
-    border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-width 0.3s cubic-bezier(0, 0, 0, 0),
+  border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
 .enjoyhint_btn:hover {
@@ -379,7 +372,7 @@
   overflow: hidden;
   text-align: center;
   color: white;
-  z-index: 107;
+  z-index: 1012;
   font-size: 22px;
   font-family: "casino_handregular", "Arial";
   -webkit-transition: opacity 400ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -423,12 +416,28 @@ div.kineticjs-content {
   position: absolute !important;
 }
 
-.enjoyhint_skip_btn {
-  position: fixed;
-}
-
 .enjoy_hint_label {
   display: inline-block;
   text-align: center;
   max-width: 80%;
+  pointer-events: auto;
 }
+
+/* Customization */
+
+.enjoyhint_prev_btn,
+.enjoyhint_next_btn {
+  margin-left: 10px;
+}
+
+.enjoyhint_skip_btn {
+  margin-left: 20px;
+}
+
+.enjoy_hint_label_actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+
