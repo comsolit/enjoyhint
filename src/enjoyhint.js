@@ -268,7 +268,7 @@
                 break;
             }
           } else {
-            $event_element.on(event, function(e) {
+            $event_element.one(event, function(e) {
               if (step_data.keyCode && e.keyCode != step_data.keyCode) {
                 return;
               }
