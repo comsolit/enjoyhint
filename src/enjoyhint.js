@@ -355,7 +355,7 @@
     };
 
     var skipAll = function() {
-      var step_data = data[current_step];
+      var step_data = data[current_step] || data[current_step - 1];
       var $element = $(step_data.selector);
 
       off(step_data.event);
